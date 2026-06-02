@@ -3,50 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Iron Heart Hauling | Junk Removal</title>
-  <meta name="description" content="Iron Heart Hauling provides junk removal, cleanouts, debris hauling, and property cleanup. Call 405-237-5992 for a free quote.">
+
+  <title>Iron Heart Hauling | Junk Removal & Cleanouts</title>
+  <meta name="description" content="Iron Heart Hauling provides junk removal, garage cleanouts, rental cleanouts, debris hauling, and property cleanup. Call or text 405-237-5992 for a free quote.">
+
   <style>
     :root{
-      --black:#050505;
-      --ink:#0b0b0b;
-      --panel:#111111;
-      --panel2:#171717;
-      --gold:#f4a900;
-      --gold2:#ffbd24;
+      --bg:#050505;
+      --surface:#0d0d0d;
+      --card:#141414;
+      --card2:#191919;
+      --gold:#f5a800;
+      --gold2:#ffc145;
       --text:#f7f7f7;
-      --muted:#bdbdbd;
-      --line:#272727;
-      --radius:22px;
+      --soft:#d8d8d8;
+      --muted:#9b9b9b;
+      --line:#292929;
+      --radius:24px;
+      --shadow:0 28px 90px rgba(0,0,0,.48);
     }
 
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
     body{
-      font-family: Inter, Arial, Helvetica, sans-serif;
-      background:var(--black);
+      font-family:Inter,Arial,Helvetica,sans-serif;
+      background:var(--bg);
       color:var(--text);
       line-height:1.55;
     }
 
     a{text-decoration:none;color:inherit}
-    img{max-width:100%;display:block}
-    .wrap{width:min(1160px,92%);margin:0 auto}
+    img{display:block;max-width:100%}
+    .wrap{width:min(1180px,92%);margin:0 auto}
 
     header{
       position:sticky;
       top:0;
       z-index:50;
-      background:rgba(5,5,5,.92);
-      border-bottom:1px solid var(--line);
+      background:rgba(5,5,5,.88);
       backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--line);
     }
 
     .nav{
-      height:74px;
+      min-height:76px;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:24px;
+      gap:22px;
     }
 
     .brand{
@@ -59,234 +63,288 @@
     }
 
     .mark{
-      width:42px;
-      height:42px;
+      width:44px;
+      height:44px;
       border-radius:14px;
-      background:var(--gold);
+      background:linear-gradient(135deg,var(--gold),var(--gold2));
       color:#000;
       display:grid;
       place-items:center;
       font-weight:1000;
-      box-shadow:0 0 0 4px rgba(244,169,0,.13);
+      box-shadow:0 0 0 4px rgba(245,168,0,.13);
     }
 
     .navlinks{
       display:flex;
       align-items:center;
       gap:28px;
-      color:#ddd;
+      color:#dfdfdf;
       font-size:.92rem;
-      font-weight:800;
+      font-weight:850;
     }
 
-    .navcta{
-      background:var(--gold);
+    .phone-pill{
+      background:linear-gradient(135deg,var(--gold),var(--gold2));
       color:#000;
       padding:12px 20px;
       border-radius:999px;
       font-weight:950;
-      box-shadow:0 0 0 4px rgba(244,169,0,.13);
+      box-shadow:0 0 0 4px rgba(245,168,0,.13);
       white-space:nowrap;
     }
 
     .hero{
-      padding:42px 0 74px;
-      border-bottom:1px solid var(--line);
+      padding:46px 0 74px;
       background:
-        radial-gradient(circle at 20% 0%, rgba(244,169,0,.13), transparent 28%),
-        linear-gradient(180deg,#070707,#050505);
+        radial-gradient(circle at 14% 0%, rgba(245,168,0,.16), transparent 30%),
+        radial-gradient(circle at 100% 28%, rgba(245,168,0,.10), transparent 26%),
+        linear-gradient(180deg,#070707 0%, #050505 100%);
+      border-bottom:1px solid var(--line);
     }
 
-    .hero-grid{
+    .hero-layout{
       display:grid;
-      grid-template-columns: .9fr 1.1fr;
-      gap:34px;
+      grid-template-columns:.86fr 1.14fr;
+      gap:38px;
       align-items:center;
     }
 
-    .hero-copy{
-      padding:20px 0;
-    }
-
-    .eyebrow{
+    .kicker{
       display:inline-flex;
-      align-items:center;
-      gap:8px;
       color:var(--gold2);
-      background:rgba(244,169,0,.10);
-      border:1px solid rgba(244,169,0,.38);
+      background:rgba(245,168,0,.10);
+      border:1px solid rgba(245,168,0,.32);
       padding:9px 14px;
       border-radius:999px;
-      font-size:.82rem;
+      font-size:.8rem;
       font-weight:950;
       letter-spacing:.8px;
-      margin-bottom:22px;
+      text-transform:uppercase;
+      margin-bottom:20px;
     }
 
     h1{
-      font-size:clamp(3rem,6vw,5.6rem);
-      line-height:.91;
-      letter-spacing:-4px;
+      font-size:clamp(3.1rem,6.4vw,6.4rem);
+      line-height:.89;
+      letter-spacing:-4.5px;
       font-weight:1000;
       margin-bottom:22px;
     }
 
     .lead{
-      color:#e6e6e6;
+      color:#e7e7e7;
       font-size:clamp(1.05rem,1.8vw,1.28rem);
-      max-width:620px;
+      max-width:610px;
       margin-bottom:28px;
     }
 
-    .hero-actions{
+    .actions{
       display:flex;
       flex-wrap:wrap;
       gap:14px;
-      margin-bottom:24px;
+      margin-bottom:22px;
     }
 
     .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      min-height:54px;
-      padding:0 22px;
-      border-radius:13px;
+      min-height:56px;
+      padding:0 23px;
+      border-radius:14px;
       font-weight:1000;
       letter-spacing:.4px;
       border:1px solid transparent;
     }
 
-    .btn-primary{background:var(--gold);color:#000}
-    .btn-secondary{background:#171717;color:#fff;border-color:#333}
+    .btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#000}
+    .btn-dark{background:#151515;border-color:#343434;color:#fff}
 
-    .trust{
+    .micro-proof{
       display:flex;
       flex-wrap:wrap;
       gap:10px;
-      color:#d7d7d7;
+      color:#d9d9d9;
       font-size:.9rem;
-      font-weight:800;
+      font-weight:850;
     }
 
-    .trust span{
-      background:#101010;
-      border:1px solid #2c2c2c;
-      border-radius:999px;
+    .micro-proof span{
+      border:1px solid #303030;
+      background:#0d0d0d;
       padding:8px 11px;
+      border-radius:999px;
     }
 
-    .hero-photo{
-      border-radius:30px;
+    .photo-card{
+      border-radius:32px;
       overflow:hidden;
-      border:1px solid rgba(255,255,255,.12);
-      box-shadow:0 35px 100px rgba(0,0,0,.62);
       background:#111;
+      border:1px solid rgba(255,255,255,.13);
+      box-shadow:var(--shadow);
+      position:relative;
     }
 
-    .hero-photo img{
+    .photo-card img{
       width:100%;
-      height:min(68vh,620px);
+      height:min(68vh,640px);
       object-fit:cover;
       object-position:center;
     }
 
-    .quickbar{
-      margin-top:-36px;
-      position:relative;
-      z-index:5;
+    .photo-note{
+      position:absolute;
+      left:18px;
+      right:18px;
+      bottom:18px;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      align-items:center;
+      background:rgba(0,0,0,.68);
+      backdrop-filter:blur(10px);
+      border:1px solid rgba(255,255,255,.15);
+      border-radius:18px;
+      padding:14px 16px;
+      color:#f2f2f2;
+      font-weight:900;
     }
 
-    .quickbar-inner{
+    .photo-note small{
+      color:var(--muted);
+      display:block;
+      font-weight:800;
+      margin-top:2px;
+    }
+
+    .quick{
+      margin-top:-34px;
+      position:relative;
+      z-index:4;
+    }
+
+    .quick-grid{
       display:grid;
       grid-template-columns:repeat(4,1fr);
       gap:1px;
       overflow:hidden;
-      border-radius:var(--radius);
+      border-radius:24px;
       border:1px solid var(--line);
       background:var(--line);
-      box-shadow:0 25px 70px rgba(0,0,0,.45);
+      box-shadow:var(--shadow);
     }
 
-    .quickitem{
+    .quick-item{
       background:#101010;
       padding:24px;
     }
 
-    .quickitem strong{
-      color:var(--gold);
+    .quick-item strong{
       display:block;
+      color:var(--gold2);
       margin-bottom:6px;
-      font-size:.95rem;
-      text-transform:uppercase;
+      font-size:.9rem;
       letter-spacing:.6px;
+      text-transform:uppercase;
     }
 
-    .quickitem span{color:var(--muted);font-size:.95rem}
+    .quick-item span{color:var(--muted)}
 
-    section{padding:88px 0}
+    section{padding:90px 0}
 
     .section-head{
       display:flex;
       justify-content:space-between;
       align-items:flex-end;
       gap:30px;
-      margin-bottom:32px;
+      margin-bottom:34px;
     }
 
     .section-head h2{
-      font-size:clamp(2.2rem,4vw,3.8rem);
+      font-size:clamp(2.25rem,4vw,3.8rem);
       line-height:1;
-      letter-spacing:-2px;
-      max-width:620px;
+      letter-spacing:-2.2px;
+      max-width:640px;
     }
 
     .section-head p{
       color:var(--muted);
-      max-width:480px;
+      max-width:500px;
       font-size:1.05rem;
     }
 
-    .services-grid{
+    .services{
       display:grid;
       grid-template-columns:repeat(4,1fr);
       gap:18px;
     }
 
     .card{
-      background:linear-gradient(180deg,var(--panel2),var(--panel));
+      background:linear-gradient(180deg,var(--card2),var(--card));
       border:1px solid var(--line);
       border-radius:var(--radius);
       padding:28px;
-      min-height:230px;
+      min-height:235px;
+      transition:transform .18s ease,border-color .18s ease;
     }
 
-    .card .icon{
-      width:48px;
-      height:48px;
-      border-radius:15px;
-      background:rgba(244,169,0,.12);
-      color:var(--gold);
+    .card:hover{
+      transform:translateY(-4px);
+      border-color:rgba(245,168,0,.42);
+    }
+
+    .icon{
+      width:50px;
+      height:50px;
+      border-radius:16px;
       display:grid;
       place-items:center;
+      background:rgba(245,168,0,.12);
+      color:var(--gold);
       font-size:1.45rem;
       margin-bottom:18px;
     }
 
-    .card h3{font-size:1.25rem;margin-bottom:10px}
+    .card h3{
+      font-size:1.22rem;
+      margin-bottom:10px;
+    }
+
     .card p{color:var(--muted)}
 
-    .split{
-      background:#0b0b0b;
+    .feature{
+      background:#0a0a0a;
       border-top:1px solid var(--line);
       border-bottom:1px solid var(--line);
     }
 
-    .process-grid{
+    .feature-layout{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:24px;
-      align-items:start;
+      align-items:stretch;
+    }
+
+    .statement{
+      background:
+        radial-gradient(circle at 20% 0%, rgba(245,168,0,.18), transparent 28%),
+        linear-gradient(135deg,#171717,#0e0e0e);
+      border:1px solid rgba(245,168,0,.25);
+      border-radius:30px;
+      padding:38px;
+    }
+
+    .statement h2{
+      font-size:clamp(2.2rem,4vw,3.9rem);
+      line-height:1;
+      letter-spacing:-2.5px;
+      margin-bottom:16px;
+    }
+
+    .statement p{
+      color:#e0e0e0;
+      margin-bottom:24px;
+      font-size:1.08rem;
     }
 
     .steps{
@@ -298,17 +356,17 @@
       display:grid;
       grid-template-columns:auto 1fr;
       gap:16px;
-      padding:22px;
       background:#121212;
       border:1px solid var(--line);
-      border-radius:18px;
+      border-radius:20px;
+      padding:22px;
     }
 
     .num{
-      width:38px;
-      height:38px;
+      width:40px;
+      height:40px;
       border-radius:999px;
-      background:var(--gold);
+      background:linear-gradient(135deg,var(--gold),var(--gold2));
       color:#000;
       display:grid;
       place-items:center;
@@ -318,95 +376,109 @@
     .step h3{margin-bottom:4px}
     .step p{color:var(--muted)}
 
-    .highlight{
-      background:
-        linear-gradient(135deg,rgba(244,169,0,.18),rgba(255,255,255,.04));
-      border:1px solid rgba(244,169,0,.28);
-      border-radius:26px;
-      padding:34px;
-    }
-
-    .highlight h2{
-      font-size:clamp(2rem,4vw,3.6rem);
-      line-height:1;
-      letter-spacing:-2px;
-      margin-bottom:14px;
-    }
-
-    .highlight p{color:#ddd;margin-bottom:22px;font-size:1.08rem}
-
-    .quote-card{
+    .audience-grid{
       display:grid;
-      grid-template-columns:1.05fr .95fr;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+    }
+
+    .audience{
+      background:#101010;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:26px;
+    }
+
+    .audience strong{
+      display:block;
+      color:#fff;
+      font-size:1.16rem;
+      margin-bottom:8px;
+    }
+
+    .audience span{color:var(--muted)}
+
+    .quote{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
       gap:22px;
       align-items:stretch;
     }
 
     .quote-main{
-      background:#111;
+      background:linear-gradient(135deg,#171717,#0d0d0d);
       border:1px solid var(--line);
-      border-radius:26px;
-      padding:38px;
+      border-radius:30px;
+      padding:40px;
     }
 
     .quote-main h2{
-      font-size:clamp(2.1rem,4vw,3.6rem);
+      font-size:clamp(2.25rem,4vw,3.9rem);
       line-height:1;
-      letter-spacing:-2px;
+      letter-spacing:-2.5px;
       margin-bottom:14px;
     }
 
-    .quote-main p{color:#ddd;margin-bottom:24px}
+    .quote-main p{
+      color:#dfdfdf;
+      max-width:620px;
+      margin-bottom:24px;
+    }
 
     .details{
-      background:#0f0f0f;
+      background:#101010;
       border:1px solid var(--line);
-      border-radius:26px;
+      border-radius:30px;
       padding:34px;
     }
 
     .detail-row{
       display:flex;
       justify-content:space-between;
-      gap:20px;
+      gap:18px;
       padding:16px 0;
-      border-bottom:1px solid #242424;
+      border-bottom:1px solid #252525;
       color:var(--muted);
     }
 
     .detail-row:last-child{border-bottom:0}
-    .detail-row strong{color:#fff;text-align:right}
+    .detail-row strong{
+      color:#fff;
+      text-align:right;
+    }
 
     footer{
       padding:30px 0;
-      border-top:1px solid var(--line);
       background:#000;
+      border-top:1px solid var(--line);
       color:#aaa;
       text-align:center;
     }
 
     @media(max-width:980px){
-      .hero-grid,.process-grid,.quote-card{grid-template-columns:1fr}
-      .hero-photo{order:-1}
-      .hero-photo img{height:430px}
-      .services-grid,.quickbar-inner{grid-template-columns:repeat(2,1fr)}
+      .hero-layout,.feature-layout,.quote{grid-template-columns:1fr}
+      .photo-card{order:-1}
+      .photo-card img{height:430px}
+      .quick-grid,.services{grid-template-columns:repeat(2,1fr)}
+      .audience-grid{grid-template-columns:1fr}
       .section-head{display:block}
       .section-head p{margin-top:14px}
       .navlinks{display:none}
     }
 
     @media(max-width:560px){
-      .nav{height:66px}
+      .nav{min-height:66px}
       .brand span{display:none}
-      .navcta{padding:10px 14px;font-size:.86rem}
-      .hero{padding:24px 0 58px}
-      .hero-photo img{height:310px}
-      h1{letter-spacing:-2px}
-      .btn{width:100%}
-      .quickbar{margin-top:0;padding-top:18px}
-      .quickbar-inner,.services-grid{grid-template-columns:1fr}
+      .phone-pill{padding:10px 14px;font-size:.86rem}
+      .hero{padding:24px 0 54px}
+      .photo-card img{height:300px}
+      .photo-note{position:static;border-radius:0}
+      h1{letter-spacing:-2.2px}
+      .actions .btn{width:100%}
+      .quick{margin-top:0;padding-top:18px}
+      .quick-grid,.services{grid-template-columns:1fr}
       section{padding:62px 0}
-      .quote-main,.details,.highlight{padding:26px}
+      .statement,.quote-main,.details{padding:26px}
     }
   </style>
 </head>
@@ -425,54 +497,61 @@
         <a href="#quote">Quote</a>
       </nav>
 
-      <a class="navcta" href="tel:4052375992">Call 405-237-5992</a>
+      <a class="phone-pill" href="tel:4052375992">Call 405-237-5992</a>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="wrap hero-grid">
-        <div class="hero-copy">
-          <div class="eyebrow">JUNK REMOVAL • CLEANOUTS • HAULING</div>
-          <h1>Fast junk removal without the hassle.</h1>
-          <p class="lead">Iron Heart Hauling clears garages, rental properties, furniture, debris, and bulky junk so your space feels usable again.</p>
+      <div class="wrap hero-layout">
+        <div>
+          <div class="kicker">Junk Removal • Cleanouts • Hauling</div>
+          <h1>Clear the clutter. Reclaim your space.</h1>
+          <p class="lead">Iron Heart Hauling helps homeowners, landlords, and businesses remove junk, debris, and unwanted items without the stress.</p>
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="tel:4052375992">CALL NOW</a>
-            <a class="btn btn-secondary" href="sms:4052375992">TEXT PHOTOS FOR A QUOTE</a>
+          <div class="actions">
+            <a class="btn btn-gold" href="tel:4052375992">CALL NOW</a>
+            <a class="btn btn-dark" href="sms:4052375992">TEXT PHOTOS FOR A QUOTE</a>
           </div>
 
-          <div class="trust">
-            <span>Residential</span>
-            <span>Commercial</span>
-            <span>Cleanouts</span>
+          <div class="micro-proof">
+            <span>Fast photo-based quotes</span>
+            <span>Residential & commercial</span>
+            <span>Professional cleanouts</span>
           </div>
         </div>
 
-        <div class="hero-photo" aria-label="Iron Heart Hauling junk removal hero image">
-          <img src="hero.jpg" alt="Iron Heart Hauling junk removal truck and debris scene">
+        <div class="photo-card">
+          <img src="hero.jpg" alt="Iron Heart Hauling crew loading junk into a dump trailer">
+          <div class="photo-note">
+            <div>
+              Built for heavy jobs.
+              <small>Garages • Rentals • Debris • Bulk Items</small>
+            </div>
+            <strong>405-237-5992</strong>
+          </div>
         </div>
       </div>
     </section>
 
-    <div class="quickbar">
+    <div class="quick">
       <div class="wrap">
-        <div class="quickbar-inner">
-          <div class="quickitem">
-            <strong>Call or text</strong>
-            <span>Send photos for a fast estimate.</span>
+        <div class="quick-grid">
+          <div class="quick-item">
+            <strong>1. Send photos</strong>
+            <span>Text the pile, room, garage, or debris.</span>
           </div>
-          <div class="quickitem">
-            <strong>Schedule pickup</strong>
-            <span>Choose a time that works.</span>
+          <div class="quick-item">
+            <strong>2. Get pricing</strong>
+            <span>Clear estimate before pickup.</span>
           </div>
-          <div class="quickitem">
-            <strong>We load it</strong>
-            <span>No heavy lifting from you.</span>
+          <div class="quick-item">
+            <strong>3. We load</strong>
+            <span>No lifting, dragging, or truck rental.</span>
           </div>
-          <div class="quickitem">
-            <strong>Space restored</strong>
-            <span>Clean, clear, and usable again.</span>
+          <div class="quick-item">
+            <strong>4. Space back</strong>
+            <span>Walk away with a cleaner property.</span>
           </div>
         </div>
       </div>
@@ -481,60 +560,60 @@
     <section id="services">
       <div class="wrap">
         <div class="section-head">
-          <h2>Cleanouts made simple.</h2>
-          <p>Built for homeowners, landlords, property managers, and businesses that need junk gone quickly.</p>
+          <h2>Junk removal for the jobs people keep putting off.</h2>
+          <p>From one bulky item to a full property reset, Iron Heart Hauling makes the cleanup feel simple.</p>
         </div>
 
-        <div class="services-grid">
+        <div class="services">
           <div class="card">
             <div class="icon">🛋️</div>
-            <h3>Junk Removal</h3>
-            <p>Furniture, appliances, boxes, trash, and unwanted items removed fast.</p>
+            <h3>Furniture & Bulk Items</h3>
+            <p>Couches, mattresses, appliances, boxes, old equipment, and general household junk.</p>
           </div>
 
           <div class="card">
             <div class="icon">🏠</div>
             <h3>Garage Cleanouts</h3>
-            <p>Clear out cluttered garages, sheds, storage rooms, and spare spaces.</p>
+            <p>Turn packed garages, sheds, and storage spaces into usable square footage again.</p>
           </div>
 
           <div class="card">
             <div class="icon">🔑</div>
-            <h3>Rental Turnovers</h3>
-            <p>Move-out junk, abandoned items, and property cleanup for landlords.</p>
+            <h3>Rental Property Cleanouts</h3>
+            <p>Move-outs, abandoned items, landlord turnovers, eviction cleanups, and property resets.</p>
           </div>
 
           <div class="card">
             <div class="icon">🧱</div>
             <h3>Debris Hauling</h3>
-            <p>Remodeling debris, yard debris, bulky material, and cleanup piles.</p>
+            <p>Remodeling debris, yard debris, scrap, broken materials, and cleanup piles.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="process" class="split">
-      <div class="wrap process-grid">
-        <div class="highlight">
-          <h2>Professional hauling with a clean finish.</h2>
-          <p>The goal is simple: show up, load fast, treat the property with respect, and leave the customer with space they can actually use.</p>
-          <a class="btn btn-primary" href="sms:4052375992">TEXT FOR A FREE QUOTE</a>
+    <section id="process" class="feature">
+      <div class="wrap feature-layout">
+        <div class="statement">
+          <h2>A stronger first impression for any property.</h2>
+          <p>Cleanouts are not just about hauling junk. They make homes feel larger, rentals turn faster, and businesses look more professional.</p>
+          <a class="btn btn-gold" href="sms:4052375992">TEXT FOR A FREE QUOTE</a>
         </div>
 
         <div class="steps">
           <div class="step">
             <div class="num">1</div>
             <div>
-              <h3>Send photos</h3>
-              <p>Text pictures of the items or area that needs cleaned out.</p>
+              <h3>Text photos of the job</h3>
+              <p>Send a few pictures of the junk, room, garage, or debris pile.</p>
             </div>
           </div>
 
           <div class="step">
             <div class="num">2</div>
             <div>
-              <h3>Get a quote</h3>
-              <p>Receive straightforward pricing based on the job size and load.</p>
+              <h3>Approve the quote</h3>
+              <p>Get a simple estimate and choose a pickup time that works.</p>
             </div>
           </div>
 
@@ -542,29 +621,58 @@
             <div class="num">3</div>
             <div>
               <h3>We haul it away</h3>
-              <p>The crew loads, hauls, and clears the space so you do not have to.</p>
+              <p>The crew loads the junk and clears the space without you doing the heavy lifting.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Who we help.</h2>
+          <p>Simple, practical hauling for the customers most likely to need fast cleanup.</p>
+        </div>
+
+        <div class="audience-grid">
+          <div class="audience">
+            <strong>Homeowners</strong>
+            <span>Declutter garages, spare rooms, sheds, yards, and bulky household items.</span>
+          </div>
+
+          <div class="audience">
+            <strong>Landlords & Property Managers</strong>
+            <span>Clear abandoned items and get rentals ready faster between tenants.</span>
+          </div>
+
+          <div class="audience">
+            <strong>Businesses & Contractors</strong>
+            <span>Remove debris, old materials, office junk, and cleanup piles after projects.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="quote">
-      <div class="wrap quote-card">
+      <div class="wrap quote">
         <div class="quote-main">
-          <h2>Need junk gone?</h2>
-          <p>Call or text Iron Heart Hauling today. Photo-based quotes make it easy to get started.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="tel:4052375992">CALL 405-237-5992</a>
-            <a class="btn btn-secondary" href="sms:4052375992">TEXT PHOTOS</a>
+          <div class="kicker">Free Quote</div>
+          <h2>Need junk gone? Start with a text.</h2>
+          <p>Send photos of what needs to be removed and get a fast quote from Iron Heart Hauling.</p>
+
+          <div class="actions">
+            <a class="btn btn-gold" href="tel:4052375992">CALL 405-237-5992</a>
+            <a class="btn btn-dark" href="sms:4052375992">TEXT PHOTOS</a>
           </div>
         </div>
 
         <div class="details">
           <div class="detail-row"><span>Business</span><strong>Iron Heart Hauling</strong></div>
           <div class="detail-row"><span>Phone</span><strong>405-237-5992</strong></div>
-          <div class="detail-row"><span>Specialty</span><strong>Junk Removal</strong></div>
-          <div class="detail-row"><span>Best For</span><strong>Homes, Rentals, Garages, Businesses</strong></div>
+          <div class="detail-row"><span>Core Service</span><strong>Junk Removal</strong></div>
+          <div class="detail-row"><span>Common Jobs</span><strong>Garages, Rentals, Debris, Bulk Items</strong></div>
+          <div class="detail-row"><span>Quote Method</span><strong>Text photos</strong></div>
         </div>
       </div>
     </section>
